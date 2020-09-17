@@ -1,0 +1,2 @@
+# Outpost
+Core of Outpost
