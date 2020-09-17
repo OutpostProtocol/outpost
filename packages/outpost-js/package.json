@@ -1,6 +1,6 @@
 {
   "name": "outpost-js",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Javascript library for outpost communities",
   "main": "index.js",
   "directories": {
