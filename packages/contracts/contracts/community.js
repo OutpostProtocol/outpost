@@ -8,7 +8,7 @@ import {
   REMOVE_CHILD,
   SET_NAME,
   SET_GUIDELINES
-} from 'outpost-protocol/functionTypes'
+} from 'outpost-js/functionTypes'
 
 export async function handle (state, action) {
   const payload = await getPayload(action.input, action.ipfs)

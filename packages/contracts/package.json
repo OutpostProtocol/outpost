@@ -36,7 +36,6 @@
     "ipfs": "^0.50.2",
     "lodash": "^4.17.20",
     "mocha": "^8.1.3",
-    "outpost-protocol": "^1.3.3",
     "rollup": "^2.27.1",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "yargs": "^16.0.3"
@@ -53,5 +52,8 @@
       ]
     ]
   },
-  "gitHead": "e4deea243198ef215cc5ded9c87b49bcb1171aa6"
+  "gitHead": "e4deea243198ef215cc5ded9c87b49bcb1171aa6",
+  "dependencies": {
+    "outpost-js": "^1.4.0"
+  }
 }

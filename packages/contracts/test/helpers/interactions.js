@@ -1,4 +1,4 @@
-import * as functionTypes from 'outpost-protocol/functionTypes'
+import * as functionTypes from 'outpost-js/functionTypes'
 import { OTHER_COMMUNITY, NEW_NAME, UPDATED_GUIDELINES_ADDR } from '../helpers/constants'
 
 const interactions = {

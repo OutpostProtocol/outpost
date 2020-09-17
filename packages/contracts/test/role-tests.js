@@ -4,7 +4,7 @@ import { DEV_NAME, IS_OPEN, OWNER, testKeys } from './helpers/constants'
 import TestHelper from './helpers'
 import { assert } from 'chai'
 import interactions from './helpers/interactions'
-import { createInitState } from 'outpost-protocol'
+import { createInitState } from 'outpost-js'
 
 describe('Community Roles', function () {
   let state

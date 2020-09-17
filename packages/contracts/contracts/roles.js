@@ -8,7 +8,7 @@ import {
   MOD_REMOVE,
   MEMBER_ADD,
   MEMBER_REMOVE
-} from 'outpost-protocol/functionTypes'
+} from 'outpost-js/functionTypes'
 
 const DID_3_PREFIX = 'did:3:'
 

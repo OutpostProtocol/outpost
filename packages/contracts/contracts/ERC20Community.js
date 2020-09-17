@@ -36,8 +36,10 @@ import {
   SET_DEFAULT_REQUIREMENTS,
   SET_IMAGE_TX,
   SET_DESCRIPTION,
-  UPGRADE_CONTRACT
-} from 'outpost-protocol/functionTypes'
+  UPGRADE_CONTRACT,
+  ADD_WRITER,
+  REMOVE_WRITER
+} from 'outpost-js/functionTypes'
 
 export async function handle (state, action) {
   const payload = await getPayload(action.input, action.ipfs)
@@ -74,6 +76,10 @@ export async function handle (state, action) {
 
   // ADD A VARIABLE IN STATE FOR UPGRADED CONTRACT?
   if (input.function === UPGRADE_CONTRACT) {}
+
+  if (input.function === ADD_WRITER) {}
+
+  if (input.function === REMOVE_WRITER) {}
 
   throw new ContractError(`No function supplied or function not recognised: "${input.function}"`)
 }
