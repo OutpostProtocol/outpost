@@ -15,8 +15,6 @@ export const UPDATED_GUIDELINES_ADDR = {
 }
 export const IS_OPEN = true
 
-export const REMOTE_CONTRACT_ID = 'need to set this if I keep testing with it'
-
 export const fullState = {
   name: 'Dev-Testing',
   isOpen: true,

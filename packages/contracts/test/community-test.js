@@ -6,6 +6,7 @@ import {
 import TestHelper from './helpers'
 import { assert } from 'chai'
 import interactions from './helpers/interactions'
+import path from 'path'
 
 describe('Miscellaneous functions', function () {
   let state
@@ -18,7 +19,7 @@ describe('Miscellaneous functions', function () {
   let interactionToRepeat
 
   before(async function () {
-    helper = new TestHelper()
+    helper = new TestHelper(path.resolve(__dirname, '../build/community.js'))
     const accounts = await helper.setupEnv(testKeys)
     ADMIN = accounts[0]
     MOD = accounts[1]

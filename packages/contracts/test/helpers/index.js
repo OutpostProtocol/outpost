@@ -5,8 +5,7 @@ import { execute } from 'smartweave/lib/contract-step'
 import DidTestHelper from '3id-test-helper'
 import IPFS from 'ipfs'
 import wallet from './test-wallet'
-import { loadContract, createContractExecutionEnvironment } from 'smartweave/lib/contract-load'
-import { REMOTE_CONTRACT_ID } from './constants'
+import { createContractExecutionEnvironment } from 'smartweave/lib/contract-load'
 
 require('dotenv').config()
 
@@ -18,32 +17,20 @@ const arweave = Arweave.init({
   protocol: 'https'
 })
 
-const CONTRACT_PATH = path.resolve(__dirname, '../../build/community.js')
-
-const contractBuffer = fs.readFileSync(CONTRACT_PATH)
-const contractSrc = contractBuffer.toString()
-
 let didHelper
 let handler
 let swGlobal
 
 export default class TestHelper {
-  constructor (isRemote = false, remoteContract = REMOTE_CONTRACT_ID) {
-    this.isRemote = Boolean(isRemote)
-    this.contractId = isRemote ? remoteContract : LOCAL_CONTRACT_ID
+  constructor (contractPath) {
+    const contractBuffer = fs.readFileSync(contractPath)
+    this.contractSrc = contractBuffer.toString()
 
-    if (isRemote) {
-      console.log(`Remote Contract ID: ${this.contractId}`)
-    }
+    this.contractId = LOCAL_CONTRACT_ID
   }
 
   async setupEnv (testKeys, ipfs) {
-    let contractInfo
-    if (this.isRemote) {
-      contractInfo = await loadContract(arweave, this.contractId)
-    } else {
-      contractInfo = createContractExecutionEnvironment(arweave, contractSrc, this.contractId)
-    }
+    const contractInfo = createContractExecutionEnvironment(arweave, this.contractSrc, this.contractId)
 
     swGlobal = contractInfo.swGlobal
     handler = contractInfo.handler
@@ -64,11 +51,6 @@ export default class TestHelper {
 
   getArweave () {
     return arweave
-  }
-
-  getRemoteContractId () {
-    if (!this.isRemote) throw new Error('Is remote should be set to true if you need the remote contract ID.')
-    return this.contractId
   }
 
   async package (input, caller) {

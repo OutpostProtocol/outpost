@@ -5,6 +5,7 @@ import TestHelper from './helpers'
 import { assert } from 'chai'
 import interactions from './helpers/interactions'
 import { createInitState } from 'outpost-js'
+import path from 'path'
 
 describe('Community Roles', function () {
   let state
@@ -17,7 +18,7 @@ describe('Community Roles', function () {
   let helper
 
   before(async function () {
-    helper = new TestHelper()
+    helper = new TestHelper(path.resolve(__dirname, '../build/community.js'))
     const accounts = await helper.setupEnv(testKeys)
     ADMIN = accounts[0]
     MOD = accounts[1]
