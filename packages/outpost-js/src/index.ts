@@ -14,10 +14,9 @@ interface InitialState {
 interface requirements {
   read: number
   comment: number
-  post: number
 }
 
-export function createInitState (defaults: InitialState) {
+export function createTokenCommunityState (defaults: InitialState) {
   const initState = {
     name: defaults.name,
     owner: defaults.owner,
@@ -28,6 +27,26 @@ export function createInitState (defaults: InitialState) {
     upgradedContract: null,
     timestamps: {}
   }
+
+  return initState
+}
+
+export function createInitState (did, name, isOpen) {
+  const initState = {
+    name,
+    isOpen,
+    guidelines: null,
+    owner: did,
+    admins: {},
+    moderators: {},
+    members: {},
+    children: {},
+    timestamps: {}
+  }
+
+  initState.admins[did] = true
+  initState.moderators[did] = true
+  initState.members[did] = true
 
   return initState
 }
