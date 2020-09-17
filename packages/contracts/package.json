@@ -8,7 +8,8 @@
     "test": "mocha -r @babel/register -t 20000 test/",
     "build": "rollup --config ./rollup.config.js && node contracts/bin/trimBundle.js",
     "lint": "eslint contracts/ test/",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "clean": "rimraf build/"
   },
   "private": true,
   "devDependencies": {
@@ -36,6 +37,8 @@
     "ipfs": "^0.50.2",
     "lodash": "^4.17.20",
     "mocha": "^8.1.3",
+    "outpost-js": "^1.4.0",
+    "rimraf": "^3.0.2",
     "rollup": "^2.27.1",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "yargs": "^16.0.3"
@@ -52,8 +55,5 @@
       ]
     ]
   },
-  "gitHead": "e4deea243198ef215cc5ded9c87b49bcb1171aa6",
-  "dependencies": {
-    "outpost-js": "^1.4.0"
-  }
+  "gitHead": "e4deea243198ef215cc5ded9c87b49bcb1171aa6"
 }
