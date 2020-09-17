@@ -31,7 +31,7 @@ export async function handle (state, action) {
   }
 
   if (input.function === TRANSFER_OWNERSHIP) {
-    ContractAssert(is3ID(input.writer), `'${input.writer}' not recognized as a valid 3ID`)
+    ContractAssert(is3ID(input.newOwner), `'${input.newOwner}' not recognized as a valid 3ID`)
 
     state.owner = input.newOwner
     return { state }
