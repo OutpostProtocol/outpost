@@ -1,33 +1,3 @@
-/*
-STATE:
-
-name
-owner
-token address
-default requirements:
-  - read
-  - comment
-
-**** writers - can only be added by owner
-
-imageTxId
-description
-timestamps
-
-METHODS:
-
-upgradeContract             X
-setName
-transferOwnership
-setTokenAddress             X
-setTokenRequirement         X
-setImageTxId                X
-setDescription              X
-
-addWriter                   X
-removeWriter                X
-*/
-
 import { getPayload, checkPayload, setTimestamp } from './utils'
 import {
   SET_NAME,
@@ -68,18 +38,36 @@ export async function handle (state, action) {
     return { state }
   }
 
-  if (input.function === SET_DEFAULT_REQUIREMENTS) {}
+  if (input.function === SET_DEFAULT_REQUIREMENTS) {
+    state.defaultRequirements = input.requirements
+    return { state }
+  }
 
-  if (input.function === SET_IMAGE_TX) {}
+  if (input.function === SET_IMAGE_TX) {
+    state.imageTxId = input.imageTxId
+    return { state }
+  }
 
-  if (input.function === SET_DESCRIPTION) {}
+  if (input.function === SET_DESCRIPTION) {
+    state.description = input.description
+    return { state }
+  }
 
   // ADD A VARIABLE IN STATE FOR UPGRADED CONTRACT?
-  if (input.function === UPGRADE_CONTRACT) {}
+  if (input.function === UPGRADE_CONTRACT) {
+    state.upgradedContract = input.newAddress
+    return { state }
+  }
 
-  if (input.function === ADD_WRITER) {}
+  if (input.function === ADD_WRITER) {
+    state.writers.push(input.writer)
+    return { state }
+  }
 
-  if (input.function === REMOVE_WRITER) {}
+  if (input.function === REMOVE_WRITER) {
+    state.writers = state.writers.filter(w => w !== input.writer)
+    return { state }
+  }
 
   throw new ContractError(`No function supplied or function not recognised: "${input.function}"`)
 }
