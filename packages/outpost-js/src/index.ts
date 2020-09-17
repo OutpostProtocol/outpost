@@ -9,6 +9,7 @@ interface InitialState {
   defaultRequirements?: Partial<requirements>
   imageTxId?: string
   description?: string
+  writers?: string[]
 }
 
 interface requirements {
@@ -24,6 +25,7 @@ export function createTokenCommunityState (defaults: InitialState) {
     defaultRequirements: defaults.defaultRequirements || {},
     imageTxId: defaults.imageTxId || null,
     description: defaults.description || null,
+    writers: defaults.writers || [defaults.owner],
     upgradedContract: null,
     timestamps: {}
   }
