@@ -4,6 +4,12 @@ import { verifyJWT } from 'did-jwt'
 import { Resolver } from 'did-resolver'
 import { getResolver } from '3id-resolver'
 
+const DID_3_PREFIX = 'did:3:'
+
+export function is3ID (did) {
+  return did.startsWith(DID_3_PREFIX)
+}
+
 export function checkPayload (state, payload) {
   const caller = payload.iss
   const callerTimestamps = state.timestamps[caller]

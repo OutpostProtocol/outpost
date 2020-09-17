@@ -9,8 +9,7 @@ import {
   MEMBER_ADD,
   MEMBER_REMOVE
 } from 'outpost-js/functionTypes'
-
-const DID_3_PREFIX = 'did:3:'
+import { is3ID } from './utils'
 
 export default function checkRoleOps (state, payload) {
   const { input } = payload
@@ -87,8 +86,4 @@ function hasModeratorPrivileges (did, state) {
 
 function isRemoveSelf (caller, recipient) {
   return caller === recipient
-}
-
-function is3ID (did) {
-  return did.startsWith(DID_3_PREFIX)
 }
