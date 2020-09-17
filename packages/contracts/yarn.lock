@@ -6839,9 +6839,9 @@ osenv@^0.1.4:
     os-tmpdir "^1.0.0"
 
 outpost-js@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/outpost-js/-/outpost-js-1.4.0.tgz#d14e30cfc0f389628286196cdc0f50262eef4c34"
-  integrity sha512-U3TN8sV4/VB7GWSpACnk4Qbca3VH3NL2MbjIH1LOIVlGOlDEnVyhi4BdURucxNGfdVNWFZqoeIuAMvIb/eWOwQ==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/outpost-js/-/outpost-js-1.4.1.tgz#7d645f3e4b3f441ad90917f3142afcf6a77dd9a1"
+  integrity sha512-vEuNQM/lZjwR9dThhYHEddoZfMdQBBZzfJovOoSi+3dPVGnS1B+LgMKHLcwfdJGdL/gtAdLxDus2qHi5RWf0iQ==
 
 p-any@^3.0.0:
   version "3.0.0"
