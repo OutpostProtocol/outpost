@@ -1,6 +1,6 @@
 {
   "name": "Outpost-Contracts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smartweave contracts for outpost",
   "author": "samhatem",
   "license": "MIT",
@@ -42,7 +42,14 @@
   },
   "babel": {
     "presets": [
-      ["@babel/preset-env", {"targets": {"node": "current"}}]
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
     ]
   }
 }
