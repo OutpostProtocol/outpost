@@ -26,5 +26,6 @@
     "tslint-config-standard": "^9.0.0",
     "typescript": "^3.9.5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "e4deea243198ef215cc5ded9c87b49bcb1171aa6"
 }
