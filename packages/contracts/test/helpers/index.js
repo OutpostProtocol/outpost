@@ -1,5 +1,4 @@
 import fs from 'fs'
-import path from 'path'
 import Arweave from 'arweave/node'
 import { execute } from 'smartweave/lib/contract-step'
 import DidTestHelper from '3id-test-helper'
