@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UPGRADE_CONTRACT = exports.SET_IMAGE_TX = exports.SET_DEFAULT_REQUIREMENTS = exports.SET_TOKEN_ADDRESS = exports.SET_DESCRIPTION = exports.SET_GUIDELINES = exports.SET_NAME = exports.REMOVE_CHILD = exports.ADD_CHILD = exports.SET_ACCESS = exports.MEMBER_REMOVE = exports.MEMBER_ADD = exports.MOD_REMOVE = exports.MOD_ADD = exports.ADMIN_REMOVE = exports.ADMIN_ADD = exports.TRANSFER_OWNERSHIP = void 0;
+exports.TRANSFER_OWNERSHIP = 'transferOwnership';
+exports.ADMIN_ADD = 'addAdmin';
+exports.ADMIN_REMOVE = 'removeAdmin';
+exports.MOD_ADD = 'addModerator';
+exports.MOD_REMOVE = 'removeModerator';
+exports.MEMBER_ADD = 'addMember';
+exports.MEMBER_REMOVE = 'removeMember';
+exports.SET_ACCESS = 'setAccess';
+exports.ADD_CHILD = 'addChild';
+exports.REMOVE_CHILD = 'removeChild';
+exports.SET_NAME = 'setName';
+exports.SET_GUIDELINES = 'setGuidelines';
+exports.SET_DESCRIPTION = 'setDescription';
+exports.SET_TOKEN_ADDRESS = 'setTokenAddress';
+exports.SET_DEFAULT_REQUIREMENTS = 'setDefaultRequirements';
+exports.SET_IMAGE_TX = 'setImageTx';
+exports.UPGRADE_CONTRACT = 'upgradeContract';
+//# sourceMappingURL=functionTypes.js.map
