@@ -1,4 +1,4 @@
 dist
 node_modules
-./functionTypes.js
-./index.js
+functionTypes.js
+index.js
