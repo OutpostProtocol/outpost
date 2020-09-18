@@ -55,5 +55,8 @@
       ]
     ]
   },
-  "gitHead": "e4deea243198ef215cc5ded9c87b49bcb1171aa6"
+  "gitHead": "e4deea243198ef215cc5ded9c87b49bcb1171aa6",
+  "dependencies": {
+    "smartweave": "https://arweave.net/KDRqJYax0-Dy_3nnWqguNThd0WjJZI3iRz3X0YscTzw"
+  }
 }
